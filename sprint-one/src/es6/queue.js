@@ -17,7 +17,6 @@ class Queue {
       this.front += 1;
       return temp; 
     }
-
   }
 
   size () {
