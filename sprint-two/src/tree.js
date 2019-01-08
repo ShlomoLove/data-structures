@@ -29,6 +29,26 @@ treeMethods.contains = function(target) {
   return false; 
 };
 
+treeMethods.maxDepth = function () {
+  let depth = 0;
+  if (this.children) {
+    let counter = 1; 
+    for (let i = 0; i < this.children.length; i++) {
+      if (this.children[i].value){
+        counter += 1
+        if (counter > depth) {
+          depth = counter;
+          console.log ('hello') 
+        }
+        this.children[i].maxDepth();
+      }
+    } 
+  
+  } 
+  console.log (depth, 'depth')
+  return 1 + depth; 
+}
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */

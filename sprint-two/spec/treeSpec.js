@@ -11,6 +11,13 @@ describe('tree', function() {
     expect(tree.hasOwnProperty('value')).to.equal(true);
   });
 
+  it ('should contain a child with a value that is added', function () {
+    tree.addChild(15);
+    tree.addChild(12);
+    tree.addChild(3);
+    expect(tree.contains(12)).to.equal(true);
+  })
+
   it('should add children to the tree', function() {
     tree.addChild(5);
     expect(tree.children[0].value).to.equal(5);
@@ -40,5 +47,17 @@ describe('tree', function() {
     expect(tree.contains(7)).to.equal(true);
     expect(tree.contains(8)).to.equal(true);
   });
+
+  it ('should detect the max depth of the tree', function () {
+    tree.addChild(4);
+    tree.addChild(17);
+    tree.addChild(9);
+    tree.children[0].addChild(2);
+    tree.children[1].addChild(6);
+    tree.children[1].addChild(10);
+    tree.children[1].children[0].addChild(7);
+    tree.children[1].children[0].children[0].addChild(11);
+    expect(tree.maxDepth()).to.equal(5);
+  })
 
 });
