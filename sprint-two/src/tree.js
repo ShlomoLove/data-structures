@@ -37,15 +37,12 @@ treeMethods.maxDepth = function () {
       if (this.children[i].value){
         counter += 1
         if (counter > depth) {
-          depth = counter;
-          console.log ('hello') 
+          depth = counter; 
         }
         this.children[i].maxDepth();
       }
     } 
-  
   } 
-  console.log (depth, 'depth')
   return 1 + depth; 
 }
 

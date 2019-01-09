@@ -16,6 +16,13 @@ describe('linkedList', function() {
     expect(linkedList.contains).to.be.a('function');
   });
 
+  it ('should show the correct length', function () {
+    linkedList.addToTail(7);
+    linkedList.addToTail(5);
+    linkedList.addToTail(2)
+    expect(linkedList.length).to.equal(3);
+  });
+
   it('should designate a new tail when new nodes are added', function() {
     linkedList.addToTail(4);
     expect(linkedList.tail.value).to.equal(4);
@@ -29,6 +36,14 @@ describe('linkedList', function() {
     expect(linkedList.head.value).to.equal(4);
     linkedList.removeHead();
     expect(linkedList.head.value).to.equal(5);
+  });
+
+  it ('should remove the tail from the list when removeTail is called', function () {
+    linkedList.addToTail(3);
+    linkedList.addToTail(7);
+    expect(linkedList.tail.value).to.equal(7);
+    linkedList.removeTail();
+    expect(linkedList.tail.value).to.equal(3);
   });
 
   it('should return the value of the former head when removeHead is called', function() {
@@ -50,6 +65,13 @@ describe('linkedList', function() {
     linkedList.removeHead();
     expect(linkedList.contains(4)).to.equal(false);
   });
+
+  it ('should designate a new head when a new head is added', function () {
+    linkedList.addToHead(7);
+    linkedList.addToHead(5);
+    linkedList.addToHead(2);
+    expect(linkedList.head.value).to.equal(2);
+  }); 
 
   // add more tests here to test the functionality of linkedList
 });
