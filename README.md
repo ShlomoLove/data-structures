@@ -1,2 +1,2 @@
 # data-structures
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project replicates the data structures used in computer science: linked lists, hash tables, trees. This project was worked on with a pair.
+This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project focused on two aspects of data structures. The first section demonstrates five different class styles: functional, functional-shared, prototypal, pseudoclassical and ES6. The second section replicates the data structures used in computer science: linked lists, graphs, hash tables, trees, binary search trees and sets. This project utilized pair-programming.
